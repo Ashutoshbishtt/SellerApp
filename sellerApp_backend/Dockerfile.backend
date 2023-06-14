@@ -1,0 +1,20 @@
+# Use the golang:1.17-alpine image as the base
+FROM golang:1.17-alpine
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the Go module files to the working directory
+COPY go.mod go.sum ./
+
+# Download and install the Go module dependencies
+RUN go mod download
+
+# Copy the rest of the application files
+COPY . .
+
+# Build the Go application
+RUN go build -o main .
+
+# Set the command to run the binary executable
+CMD ["./main"]
