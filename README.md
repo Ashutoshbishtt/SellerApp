@@ -33,4 +33,28 @@ The project aims to create a service that supports order management with various
 ```shell
 cd client
 npm install
-npm run build
+npm start'''
+
+### Database Setup
+
+- Open MySQL Workbench and connect to your local MySQL server.
+- Execute the following SQL queries to create the necessary tables:
+
+```sql
+CREATE TABLE orders (
+  id VARCHAR(255) PRIMARY KEY,
+  status VARCHAR(255),
+  total DECIMAL(10, 2),
+  currency_unit VARCHAR(10)
+);
+
+CREATE TABLE order_items (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  order_id VARCHAR(255),
+  item_id VARCHAR(255),
+  description VARCHAR(255),
+  price DECIMAL(10, 2),
+  quantity INT,
+  FOREIGN KEY (order_id) REFERENCES orders(id)
+);
+
