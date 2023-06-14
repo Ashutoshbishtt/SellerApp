@@ -89,3 +89,13 @@ go run main.go
 ```shell
 docker-compose up -d
 ```
+### Running Tests
+
+```shell
+cd seller-app
+go test .
+```
+
+Navigate to the `seller-app` directory in your terminal or command prompt. Then, execute the command `go test .` to run the tests.
+
+Make sure you have all the necessary dependencies installed and configured before running the tests. Additionally, ensure that you are in the correct directory (`seller-app`) for the tests to execute successfully.
