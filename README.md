@@ -68,6 +68,6 @@ CREATE TABLE order_items (
 ### Backend Setup
 
 ```shell
-cd seller-app
+cd sellerApp_backend
 go run main.go
 ```
