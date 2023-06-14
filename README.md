@@ -58,4 +58,5 @@ CREATE TABLE order_items (
   quantity INT,
   FOREIGN KEY (order_id) REFERENCES orders(id)
 );
+```
 
