@@ -71,3 +71,12 @@ CREATE TABLE order_items (
 cd sellerApp_backend
 go run main.go
 ```
+### Docker Setup
+
+- Make sure Docker is installed and running on your machine.
+- In the project's main directory, locate the `docker-compose.yml` file.
+- Use the following command to build and run the Docker containers:
+
+```shell
+docker-compose up -d
+```
