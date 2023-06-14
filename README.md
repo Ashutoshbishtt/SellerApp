@@ -59,11 +59,11 @@ CREATE TABLE order_items (
   FOREIGN KEY (order_id) REFERENCES orders(id)
 );
 ```
-
 ### Data Setup
 
-- Locate the `dummyData.xlsx` file in the project directory.
-- Import the data from the `dummyData.xlsx` file into the MySQL database by either dragging and dropping the file into MySQL Workbench or manually entering the data.
+- We can use the `dummyData.xlsx` file for testing purposes to verify if our application is working correctly.
+- To test the data import functionality, simply drag and drop the `dummyData.xlsx` file into the designated drop zone.
+- If the data inside the `dummyData.xlsx` file is successfully saved to the MySQL database, it indicates that the import process was successful.
 
 ### Backend Setup
 
