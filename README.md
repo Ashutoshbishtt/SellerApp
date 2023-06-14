@@ -60,3 +60,14 @@ CREATE TABLE order_items (
 );
 ```
 
+### Data Setup
+
+- Locate the `dummyData.xlsx` file in the project directory.
+- Import the data from the `dummyData.xlsx` file into the MySQL database by either dragging and dropping the file into MySQL Workbench or manually entering the data.
+
+### Backend Setup
+
+```shell
+cd seller-app
+go run main.go
+```
