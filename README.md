@@ -75,8 +75,8 @@ go run main.go
 
 - Open Postman and import the provided screenshots of the tested APIs:
 
-  - `storeOrder`: ![Screenshot]([https://example.com/storeOrder-screenshot.png](https://photos.app.goo.gl/XzgGWN4yPSstjDrBA))
-  - `getOrderById`: ![Screenshot]([https://example.com/getOrder-screenshot.png](https://photos.app.goo.gl/Haj3SrQDas6Bxs7F8))
+  - `storeOrder`: ![Screenshot]([https://photos.app.goo.gl/XzgGWN4yPSstjDrBA])
+  - `getOrderById`: ![Screenshot]([(https://photos.app.goo.gl/Haj3SrQDas6Bxs7F8)])
   - `getAllOrders`: ![Screenshot](https://example.com/getAllOrders-screenshot.png)
   - `updateOrderStatus`: ![Screenshot](https://example.com/updateOrderStatus-screenshot.png)
 
