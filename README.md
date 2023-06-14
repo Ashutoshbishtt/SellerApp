@@ -61,9 +61,9 @@ CREATE TABLE order_items (
 ```
 ### Data Setup
 
-- We can use the `dummyData.xlsx` file for testing purposes to verify if our application is working correctly.
-- To test the data import functionality, simply drag and drop the `dummyData.xlsx` file into the designated drop zone.
-- If the data inside the `dummyData.xlsx` file is successfully saved to the MySQL database, it indicates that the import process was successful.
+- We can use the `SalesDetails.xlsx` file for testing purposes to verify if our application is working correctly.
+- To test the data import functionality, simply drag and drop the `SalesDetails.xlsx` file into the designated drop zone.
+- If the data inside the `SalesDetails.xlsx` file is successfully saved to the MySQL database, it indicates that the import process was successful.
 
 ### Backend Setup
 
