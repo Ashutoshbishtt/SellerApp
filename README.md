@@ -71,6 +71,15 @@ CREATE TABLE order_items (
 cd sellerApp_backend
 go run main.go
 ```
+### API Testing
+
+- Open Postman and import the provided screenshots of the tested APIs:
+
+  - `storeOrder`: ![Screenshot]([https://example.com/storeOrder-screenshot.png](https://photos.app.goo.gl/XzgGWN4yPSstjDrBA))
+  - `getOrder`: ![Screenshot](https://example.com/getOrder-screenshot.png)
+  - `getAllOrders`: ![Screenshot](https://example.com/getAllOrders-screenshot.png)
+  - `updateOrderStatus`: ![Screenshot](https://example.com/updateOrderStatus-screenshot.png)
+
 ### Docker Setup
 
 - Make sure Docker is installed and running on your machine.
