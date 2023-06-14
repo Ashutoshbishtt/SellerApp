@@ -33,7 +33,7 @@ The project aims to create a service that supports order management with various
 ```shell
 cd client
 npm install
-npm start
+npm start \```
 
 ### Database Setup
 
