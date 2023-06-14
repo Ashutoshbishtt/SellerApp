@@ -9,7 +9,6 @@ function ExcelDragAndDrop() {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [isError, setIsError] = useState(false);
 
   const handleDrop = async acceptedFiles => {
     const file = acceptedFiles[0];
@@ -17,7 +16,6 @@ function ExcelDragAndDrop() {
 
     setIsLoading(true);
     setIsSuccess(false);
-    setIsError(false);
 
     reader.onload = async e => {
       const data = new Uint8Array(e.target.result);
@@ -57,29 +55,14 @@ function ExcelDragAndDrop() {
 
       try {
         // Simulating an asynchronous save operation
-        const result = await dispatch(storeOrder(orders));
-
-        if (result.error) {
-          setIsError(true);
-          setIsSuccess(false);
-          setIsLoading(false);
-        } else {
-          setIsError(false);
-          setIsSuccess(true);
-          setIsLoading(false);
-        }
+        await dispatch(storeOrder(orders));
+        setIsSuccess(true);
       } catch (error) {
-        setIsError(true);
         setIsSuccess(false);
-        setIsLoading(false);
       }
 
-      console.log(orders);
-    };
-
-    reader.onerror = () => {
       setIsLoading(false);
-      setIsError(true);
+      console.log(orders);
     };
 
     reader.readAsArrayBuffer(file);
@@ -92,37 +75,28 @@ function ExcelDragAndDrop() {
   });
 
   return (
-    <div
-      {...getRootProps()}
-      className={`drag-area ${isDragActive ? "drag-active" : ""}`}
-    >
-      <input {...getInputProps()} />
-      {isLoading ? (
-        <div className="loading-spinner" />
-      ) : (
-        <>
-          {isSuccess ? (
-            <p className="success-message">
-              File saved in the database successfully!
+    <>
+      <p style={{ textAlign: "center", fontSize: "12px", color: "#888" }}>
+        This application is made by Ashutosh
+      </p>
+      <div
+        {...getRootProps()}
+        className={`drag-area ${isDragActive ? "drag-active" : ""}`}
+      >
+        <input {...getInputProps()} />
+        {isLoading ? (
+          <div className="loading-spinner" />
+        ) : (
+          <>
+            <p className="drop-text">
+              {isDragActive
+                ? "Drop the Excel file here..."
+                : "Drag and drop an Excel file here, or click to select a file"}
             </p>
-          ) : (
-            <>
-              {isError ? (
-                <p className="error-message">
-                  Error occurred. Please select another file.
-                </p>
-              ) : (
-                <p className="drop-text">
-                  {isDragActive
-                    ? "Drop the Excel file here..."
-                    : "Drag and drop an Excel file here, or click to select a file"}
-                </p>
-              )}
-            </>
-          )}
-        </>
-      )}
-    </div>
+          </>
+        )}
+      </div>
+    </>
   );
 }
 
