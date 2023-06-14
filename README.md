@@ -40,6 +40,7 @@ npm start
 
 - Open MySQL Workbench and connect to your local MySQL server.
 - Execute the following SQL queries to create the necessary tables:
+- Change the username and password for the MySQL URL in the main.go file from your username and password.
 
 ```sql
 CREATE TABLE orders (
