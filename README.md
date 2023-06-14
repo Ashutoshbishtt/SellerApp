@@ -34,7 +34,7 @@ The project aims to create a service that supports order management with various
 cd client
 npm install
 npm start 
-\```
+```
 
 ### Database Setup
 
