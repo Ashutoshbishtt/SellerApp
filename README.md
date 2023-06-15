@@ -93,10 +93,10 @@ docker-compose up -d
 ### Running Tests
 
 ```shell
-cd seller-app
+cd sellerApp_backend
 go test
 ```
 
 Navigate to the `sellerApp_backend` directory in your terminal or command prompt. Then, execute the command `go test` to run the tests.
 
-Make sure you have all the necessary dependencies installed and configured before running the tests. Additionally, ensure that you are in the correct directory (`seller-app`) for the tests to execute successfully.
+
