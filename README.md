@@ -74,7 +74,7 @@ go run main.go
 ```
 ### API Testing
 
-- Open Postman and import the provided screenshots of the tested APIs:
+- These are the Screenshots of API testing:
 
   - `storeOrder`: ![Screenshot](https://i.imgur.com/Q42kFs6.png)
   - `getOrderById`: ![Screenshot](https://i.imgur.com/6Ye9CxU.png)
